@@ -1,1 +1,28 @@
-This file was created by PyCharm 2.7.1 for binding GitHub repository
+visiblenumbers Django Application
+===========================
+
+This is a Django ( 1.5 and 1.4 ) application for [http://www.aastra.com/aastra-6739i.htm](Aastra 6739i Sip Phone) and peoples visual impaired.
+
+Installation
+------------
+
+VisibleNumbers require:
+
+* Python 2.7
+* Python PIL with TrueType Support
+* PhoneNumbers Python Library [https://github.com/daviddrysdale/python-phonenumbers]
+* Django 1.4+
+* Aastra 6739i SIP device
+
+Usage
+------------
+
+Configure the Server IP and the server port on your visiblenumbers installation
+Go to settings.py file and put the Server IP and the Server Port ( default : 8000 )
+Get the IP of the Aastra 6739i SIP device
+Open the Phone web page and go to Advanced Settings -> Action URI
+Configure the Incoming Call Action URI with the url of your server installation
+Ex: http://<YOUR_IP_SERVER>:8000/visible/aastra?number=$$REMOTENUMBER$$
+the $$REMOTENUMBER$$ variable is mandatory
+
+if all is correct call your Extension phone and you can see the result
